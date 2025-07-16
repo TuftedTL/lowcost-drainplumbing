@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-theme: jekyll-theme-minimal
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Cost Drain Plumbing | Affordable Plumbing Services in Honolulu</title>
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -22,7 +22,7 @@ theme: jekyll-theme-minimal
     </script>
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ "/assets/images/plumbing-hero.jpg" | relative_url }}');
             background-size: cover;
             background-position: center;
         }
@@ -256,7 +256,9 @@ theme: jekyll-theme-minimal
 
     <!-- Contact Form Section -->
     <form action="https://formsubmit.co/abinsaytroy@gmail.com" method="POST" />
-    <section id="contact" class="py-16 bg-white">    
+
+
+    <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
@@ -377,7 +379,7 @@ theme: jekyll-theme-minimal
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2023 Low Cost Drain Plumbing. All rights reserved.</p>
+                <p>&copy; {{ 'now' | date: "%Y" }} Low Cost Drain Plumbing. All rights reserved.</p>
                 <p class="mt-2">Serving Honolulu and surrounding areas with affordable plumbing solutions.</p>
             </div>
         </div>
@@ -401,7 +403,7 @@ theme: jekyll-theme-minimal
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function= (e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
